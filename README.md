@@ -10,8 +10,4 @@ Woohoo.
 Usage
 ===
 
-Usage is pretty simple. Just instantiate an HHBarCodeViewController using
-
-     [HHBarCodeViewController new]
-
-and present it or push it. Upon recognizing a bar code, the delegate method `barCodeViewController:didDetectBarCode:` will be called and you can choose to dismiss the View Controller or not
+Usage is pretty simple. Just instantiate an HHBarCodeViewController using `[HHBarCodeViewController new]` and present it or push it. Upon recognizing a bar code, the delegate method `barCodeViewController:didDetectBarCode:` will be called and you can choose to dismiss the View Controller or not
