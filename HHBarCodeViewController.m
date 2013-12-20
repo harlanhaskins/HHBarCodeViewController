@@ -49,9 +49,9 @@
     
     
     _cancelButton = [[UIButton alloc] init];
-    _cancelButton.size = CGSizeMake(80, 40);
+    _cancelButton.frame = CGRectMake(0, 0, 80, 40);
     [_cancelButton setTitleColor:_label.textColor forState:UIControlStateNormal];
-    [_cancelButton setTitle:NSLocalizedString(@"common_cancel", @"Cancel") forState:UIControlStateNormal];
+    [_cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
     [_cancelButton setBackgroundColor:_label.backgroundColor];
     [_cancelButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_cancelButton];
@@ -100,9 +100,12 @@
 }
 
 - (void) viewDidLayoutSubviews {
-    _label.frame = CGRectMake(_cancelButton.width, self.view.bounds.size.height - 40, self.view.bounds.size.width - _cancelButton.width, 40);
-    _cancelButton.bottom = self.view.height;
-    _cancelButton.x = 0;
+    _label.frame = CGRectMake(_cancelButton.frame.size.width, self.view.bounds.size.height - 40, self.view.bounds.size.width - _cancelButton.frame.size.width, 40);
+    
+    CGRect cancelButtonFrame = _cancelButton.frame;
+    cancelButtonFrame.origin.y = self.view.frame.size.height - _cancelButton.frame.size.height;
+    cancelButtonFrame.origin.x = 0;
+    _cancelButton.frame = cancelButtonFrame;
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
