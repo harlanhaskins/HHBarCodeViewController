@@ -24,6 +24,7 @@
     UIView *_highlightView;
     UILabel *_label;
     UIButton *_cancelButton;
+    UIButton *_flashButton;
 }
 @end
 
@@ -46,7 +47,6 @@
     _label.textAlignment = NSTextAlignmentCenter;
     _label.text = @"(none)";
     [self.view addSubview:_label];
-    
     
     _cancelButton = [[UIButton alloc] init];
     _cancelButton.frame = CGRectMake(0, 0, 80, 40);
@@ -82,6 +82,36 @@
 
     [self.view bringSubviewToFront:_highlightView];
     [self.view bringSubviewToFront:_label];
+    [self.view bringSubviewToFront:_cancelButton];
+    
+    if ([_device hasTorch]) {
+        
+        _flashButton = [[UIButton alloc] init];
+        _flashButton.frame = CGRectMake(0, 0, 80, 40);
+        [_flashButton setTitleColor:_label.textColor forState:UIControlStateNormal];
+        [_flashButton setTitle:@"Flash" forState:UIControlStateNormal];
+        [_flashButton setBackgroundColor:_label.backgroundColor];
+        [_flashButton addTarget:self action:@selector(toggleFlash) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_flashButton];
+        [self.view bringSubviewToFront:_flashButton];
+        
+        [_device lockForConfiguration:nil];
+        [_device setTorchMode:AVCaptureTorchModeOff];
+        [_device unlockForConfiguration];
+    }
+}
+
+- (void) toggleFlash {
+    [_device lockForConfiguration:nil];
+    if (_device.torchMode == AVCaptureTorchModeOff) {
+        [_device setTorchMode:AVCaptureTorchModeOn];
+        [_flashButton setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    }
+    else {
+        [_device setTorchMode:AVCaptureTorchModeOff];
+        [_flashButton setTitleColor:_label.textColor forState:UIControlStateNormal];
+    }
+    [_device unlockForConfiguration];
 }
 
 - (void) setHighlightColor:(UIColor*)highlightColor {
@@ -100,11 +130,21 @@
 }
 
 - (void) viewDidLayoutSubviews {
-    _label.frame = CGRectMake(_cancelButton.frame.size.width, self.view.bounds.size.height - 40, self.view.bounds.size.width - _cancelButton.frame.size.width, 40);
+    CGRect labelFrame = CGRectMake(_cancelButton.frame.size.width, self.view.bounds.size.height - 40, self.view.bounds.size.width - _cancelButton.frame.size.width, 40);
     
     CGRect cancelButtonFrame = _cancelButton.frame;
     cancelButtonFrame.origin.y = self.view.frame.size.height - _cancelButton.frame.size.height;
-    cancelButtonFrame.origin.x = 0;
+    
+    if ([_device hasTorch]) {
+        labelFrame.size.width -= _flashButton.frame.size.width;
+        CGRect flashButtonFrame = _flashButton.frame;
+        flashButtonFrame.origin.y = cancelButtonFrame.origin.y;
+        flashButtonFrame.origin.x = labelFrame.origin.x + labelFrame.size.width;
+        _flashButton.frame = flashButtonFrame;
+    }
+    
+    _label.frame = labelFrame;
+    
     _cancelButton.frame = cancelButtonFrame;
 }
 
@@ -131,7 +171,6 @@
         if (detectionString != nil)
         {
             _label.text = detectionString;
-            
             [_delegate barCodeViewController:self didDetectBarCode:detectionString];
             break;
         }
