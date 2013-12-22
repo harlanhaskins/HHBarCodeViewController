@@ -14,7 +14,7 @@ Usage is pretty simple. Just instantiate an HHBarCodeViewController using `[HHBa
 
 I'd highly recommend if you use the returned bar code that you do it in a completion after dismissing the ViewController. This will prevent repeated actions since `HHBarCodeViewController` calls that delegate method multiple times in its lifetime.
 
-A good usage is like this:
+Like this:
 
     - (void) barCodeViewController:(UIViewController *)barCodeViewController didDetectBarCode:(NSString *)barCode {
         [self dismissViewControllerAnimated:YES completion:^{
