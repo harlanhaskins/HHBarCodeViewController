@@ -13,8 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "HHBarCodeViewController.h"
 
-@interface HHBarCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
-{
+@interface HHBarCodeViewController () <AVCaptureMetadataOutputObjectsDelegate> {
     AVCaptureSession *_session;
     AVCaptureDevice *_device;
     AVCaptureDeviceInput *_input;
@@ -30,8 +29,7 @@
 
 @implementation HHBarCodeViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     _highlightView = [[UIView alloc] init];
@@ -148,34 +146,37 @@
     _cancelButton.frame = cancelButtonFrame;
 }
 
-- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
-{
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     CGRect highlightViewRect = CGRectZero;
     AVMetadataMachineReadableCodeObject *barCodeObject;
     NSString *detectionString = nil;
-    NSArray *barCodeTypes = @[AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode39Mod43Code,
-            AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code,
-            AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode];
+    NSArray *barCodeTypes = @[AVMetadataObjectTypeUPCECode,
+                              AVMetadataObjectTypeCode39Code,
+                              AVMetadataObjectTypeCode39Mod43Code,
+                              AVMetadataObjectTypeEAN13Code,
+                              AVMetadataObjectTypeEAN8Code,
+                              AVMetadataObjectTypeCode93Code,
+                              AVMetadataObjectTypeCode128Code,
+                              AVMetadataObjectTypePDF417Code,
+                              AVMetadataObjectTypeQRCode,
+                              AVMetadataObjectTypeAztecCode];
 
     for (AVMetadataObject *metadata in metadataObjects) {
         for (NSString *type in barCodeTypes) {
-            if ([metadata.type isEqualToString:type])
-            {
-                barCodeObject = (AVMetadataMachineReadableCodeObject *)[_prevLayer transformedMetadataObjectForMetadataObject:(AVMetadataMachineReadableCodeObject *)metadata];
+            if ([metadata.type isEqualToString:type]) {
+                barCodeObject = (AVMetadataMachineReadableCodeObject *)[_prevLayer transformedMetadataObjectForMetadataObject:metadata];
                 highlightViewRect = barCodeObject.bounds;
                 detectionString = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
                 break;
             }
         }
 
-        if (detectionString != nil)
-        {
+        if (detectionString != nil) {
             _label.text = detectionString;
             [_delegate barCodeViewController:self didDetectBarCode:detectionString];
             break;
         }
-        else
-        {
+        else {
             _label.text = @"(none)";
         }
     }
