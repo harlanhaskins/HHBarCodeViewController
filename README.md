@@ -10,4 +10,15 @@ Woohoo.
 Usage
 ===
 
-Usage is pretty simple. Just instantiate an HHBarCodeViewController using `[HHBarCodeViewController new]` and present it or push it. Upon recognizing a bar code, the delegate method `barCodeViewController:didDetectBarCode:` will be called and you can choose to dismiss the View Controller or not
+Usage is pretty simple. Just instantiate an HHBarCodeViewController using `[HHBarCodeViewController new]` and present it or push it. Upon recognizing a bar code, the delegate method `barCodeViewController:didDetectBarCode:` will be called.
+
+I'd highly recommend if you use the returned bar code that you do it in a completion after dismissing the ViewController. This will prevent repeated actions since `HHBarCodeViewController` calls that delegate method multiple times in its lifetime.
+
+A good usage is like this:
+
+    - (void) barCodeViewController:(UIViewController *)barCodeViewController didDetectBarCode:(NSString *)barCode {
+        [self dismissViewControllerAnimated:YES completion:^{
+            dataTextView.text = barCode;
+        }];
+    }
+
