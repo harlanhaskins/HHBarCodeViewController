@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "HHBarCodeViewController"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "HHBarCodeViewController is a quick modal Bar Code reader using the iOS 7 native bar code scanning APIs."
   s.homepage         = "https://github.com/harlanhaskins/HHBarCodeViewController"
   s.license          = 'MIT'
