@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9284D3718ADDF0F006A112E /* HHBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9284D3618ADDF0F006A112E /* HHBarCodeViewController.m */; };
 		C9EC4FF4186676D9001EDFE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC4FF3186676D9001EDFE4 /* Foundation.framework */; };
 		C9EC4FF6186676D9001EDFE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC4FF5186676D9001EDFE4 /* CoreGraphics.framework */; };
 		C9EC4FF8186676D9001EDFE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC4FF7186676D9001EDFE4 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9284D3518ADDF0F006A112E /* HHBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HHBarCodeViewController.h; path = ../../HHBarCodeViewController/HHBarCodeViewController.h; sourceTree = "<group>"; };
+		C9284D3618ADDF0F006A112E /* HHBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HHBarCodeViewController.m; path = ../../HHBarCodeViewController/HHBarCodeViewController.m; sourceTree = "<group>"; };
 		C9EC4FF0186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHBarCodeViewControllerSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EC4FF3186676D9001EDFE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9EC4FF5186676D9001EDFE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +129,8 @@
 		C9EC4FFA186676D9001EDFE4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9284D3518ADDF0F006A112E /* HHBarCodeViewController.h */,
+				C9284D3618ADDF0F006A112E /* HHBarCodeViewController.m */,
 				C9EC502718667753001EDFE4 /* UIView+Positioning.h */,
 				C9EC50251866774E001EDFE4 /* UIView+Positioning.m */,
 				C9EC4FFB186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject-Info.plist */,
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9284D3718ADDF0F006A112E /* HHBarCodeViewController.m in Sources */,
 				C9EC5024186676F8001EDFE4 /* CameraPresenterViewController.m in Sources */,
 				C9EC5004186676D9001EDFE4 /* AppDelegate.m in Sources */,
 				C9EC50261866774E001EDFE4 /* UIView+Positioning.m in Sources */,

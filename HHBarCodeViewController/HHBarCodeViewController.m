@@ -13,7 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "HHBarCodeViewController.h"
 
-@interface HHBarCodeViewController () <AVCaptureMetadataOutputObjectsDelegate> {
+@interface HHBarCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
     @property (nonatomic) AVCaptureSession *session;
     @property (nonatomic) AVCaptureDevice *device;
     @property (nonatomic) AVCaptureDeviceInput *input;
@@ -24,7 +24,6 @@
     @property (nonatomic) UILabel *label;
     @property (nonatomic) UIButton *cancelButton;
     @property (nonatomic) UIButton *flashButton;
-}
 @end
 
 @implementation HHBarCodeViewController
@@ -66,7 +65,7 @@
     }
 
     self.output = [[AVCaptureMetadataOutput alloc] init];
-    [self.output setMetadataObjectsDelegate:self queue:dispatchself.getself.mainself.queue()];
+    [self.output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     [self.session addOutput:self.output];
 
     self.output.metadataObjectTypes = [self.output availableMetadataObjectTypes];
