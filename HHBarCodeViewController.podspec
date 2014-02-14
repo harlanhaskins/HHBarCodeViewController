@@ -9,7 +9,8 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/harlanhaskins'
 
   s.requires_arc = true
-
+  s.platform = :ios, '7.0'
+  s.platform = :ios
   s.source_files = 'HHBarCodeViewController/*.{h,m}'
 
 end
