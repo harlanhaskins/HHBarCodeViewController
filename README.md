@@ -2,7 +2,7 @@
 
 HHBarCodeViewController is a quick modal Bar Code reader using the iOS 7 native bar code scanning APIs.
 
-This was originally for me to use because the only implementations I could find were code snippets on [blog posts](http://www.infragistics.com/community/blogs/torrey-betts/archive/2013/10/10/scanning-barcodes-with-ios-7-objective-c.aspx), so I consolidated that code and made it into a handy modal view controller that can be easily presented and has fancy delegate callbacks.
+This was originally for me to use because the only implementations I could find were code snippets on [blog posts](http://www.infragistics.com/community/blogs/torrey-betts/archive/2013/10/10/scanning-barcodes-with-ios-7-objective-c.aspx), so I consolidated that code and made it into a handy modal view controller that can be easily presented and has fancy delegate callbacks and blocks.
 
 Woohoo.
 
@@ -31,4 +31,4 @@ Harlan Haskins ([@harlanhaskins](http://github.com/harlanhaskins))
 
 # License
 
-HHBarCodeViewController is available under the MIT license, a copy of this is in the file called `LICENSE`.
+HHBarCodeViewController is available under the MIT license, a copy of which is in the file called `LICENSE`.
