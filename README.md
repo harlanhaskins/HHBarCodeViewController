@@ -1,26 +1,34 @@
 # HHBarCodeViewController
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/HHBarCodeViewController/badge.png)](http://cocoadocs.org/docsets/HHBarCodeViewController)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/HHBarCodeViewController/badge.png)](http://cocoadocs.org/docsets/HHBarCodeViewController)
+HHBarCodeViewController is a quick modal Bar Code reader using the iOS 7 native bar code scanning APIs.
 
-## Usage
+This was originally for me to use because the only implementations I could find were code snippets on [blog posts](http://www.infragistics.com/community/blogs/torrey-betts/archive/2013/10/10/scanning-barcodes-with-ios-7-objective-c.aspx), so I consolidated that code and made it into a handy modal view controller that can be easily presented and has fancy delegate callbacks.
 
-To run the example project; clone the repo, and run `pod install` from the Project directory first.
+Woohoo.
 
-## Requirements
+# Installation
 
-## Installation
+Installation is easiest through [CocoaPods](http://www.cocoapods.org). Just add this line to your Podfile
+`pod 'HHBarCodeViewController'`
 
-HHBarCodeViewController is available through [CocoaPods](http://cocoapods.org), to install
-it simply add the following line to your Podfile:
+# Usage
 
-    pod "HHBarCodeViewController"
+Usage is pretty simple. Just instantiate an HHBarCodeViewController using `[HHBarCodeViewController new]` and present it or push it. Upon recognizing a bar code, the delegate method `barCodeViewController:didDetectBarCode:` or the block `detectedBarCodeBlock()` will be called.
 
-## Author
+I'd highly recommend if you use the returned bar code that you do it in a completion after dismissing the ViewController. This will prevent repeated actions since `HHBarCodeViewController` calls that delegate method multiple times in its lifetime.
 
-Harlan Haskins, harlan@bryx.com
+Like this:
 
-## License
+    - (void) barCodeViewController:(UIViewController *)barCodeViewController didDetectBarCode:(NSString *)barCode {
+        [self dismissViewControllerAnimated:YES completion:^{
+            dataTextView.text = barCode;
+        }];
+    }
 
-HHBarCodeViewController is available under the MIT license. See the LICENSE file for more info.
+# Author
 
+Harlan Haskins ([@harlanhaskins](http://github.com/harlanhaskins))
+
+# License
+
+HHBarCodeViewController is available under the MIT license, a copy of this is in the file called `LICENSE`.

@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9EC4FF4186676D9001EDFE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC4FF3186676D9001EDFE4 /* Foundation.framework */; };
+		C9EC4FF6186676D9001EDFE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC4FF5186676D9001EDFE4 /* CoreGraphics.framework */; };
+		C9EC4FF8186676D9001EDFE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC4FF7186676D9001EDFE4 /* UIKit.framework */; };
+		C9EC4FFE186676D9001EDFE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9EC4FFC186676D9001EDFE4 /* InfoPlist.strings */; };
+		C9EC5000186676D9001EDFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC4FFF186676D9001EDFE4 /* main.m */; };
+		C9EC5004186676D9001EDFE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC5003186676D9001EDFE4 /* AppDelegate.m */; };
+		C9EC5006186676D9001EDFE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EC5005186676D9001EDFE4 /* Images.xcassets */; };
+		C9EC500D186676D9001EDFE4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC500C186676D9001EDFE4 /* XCTest.framework */; };
+		C9EC500E186676D9001EDFE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC4FF3186676D9001EDFE4 /* Foundation.framework */; };
+		C9EC500F186676D9001EDFE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EC4FF7186676D9001EDFE4 /* UIKit.framework */; };
+		C9EC5017186676D9001EDFE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9EC5015186676D9001EDFE4 /* InfoPlist.strings */; };
+		C9EC5019186676D9001EDFE4 /* BarCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC5018186676D9001EDFE4 /* BarCodeTests.m */; };
+		C9EC5024186676F8001EDFE4 /* CameraPresenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC5023186676F8001EDFE4 /* CameraPresenterViewController.m */; };
+		C9EC50261866774E001EDFE4 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EC50251866774E001EDFE4 /* UIView+Positioning.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9EC5010186676D9001EDFE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EC4FE8186676D9001EDFE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9EC4FEF186676D9001EDFE4;
+			remoteInfo = BarCode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9EC4FF0186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHBarCodeViewControllerSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EC4FF3186676D9001EDFE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9EC4FF5186676D9001EDFE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9EC4FF7186676D9001EDFE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9EC4FFB186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HHBarCodeViewControllerSampleProject-Info.plist"; sourceTree = "<group>"; };
+		C9EC4FFD186676D9001EDFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9EC4FFF186676D9001EDFE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9EC5001186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HHBarCodeViewControllerSampleProject-Prefix.pch"; sourceTree = "<group>"; };
+		C9EC5002186676D9001EDFE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C9EC5003186676D9001EDFE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C9EC5005186676D9001EDFE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C9EC500B186676D9001EDFE4 /* HHBarCodeViewControllerSampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHBarCodeViewControllerSampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EC500C186676D9001EDFE4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C9EC5014186676D9001EDFE4 /* HHBarCodeViewControllerSampleProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HHBarCodeViewControllerSampleProjectTests-Info.plist"; sourceTree = "<group>"; };
+		C9EC5016186676D9001EDFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9EC5018186676D9001EDFE4 /* BarCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarCodeTests.m; sourceTree = "<group>"; };
+		C9EC5022186676F8001EDFE4 /* CameraPresenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPresenterViewController.h; sourceTree = "<group>"; };
+		C9EC5023186676F8001EDFE4 /* CameraPresenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPresenterViewController.m; sourceTree = "<group>"; };
+		C9EC50251866774E001EDFE4 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
+		C9EC502718667753001EDFE4 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9EC4FED186676D9001EDFE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC4FF6186676D9001EDFE4 /* CoreGraphics.framework in Frameworks */,
+				C9EC4FF8186676D9001EDFE4 /* UIKit.framework in Frameworks */,
+				C9EC4FF4186676D9001EDFE4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC5008186676D9001EDFE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC500D186676D9001EDFE4 /* XCTest.framework in Frameworks */,
+				C9EC500F186676D9001EDFE4 /* UIKit.framework in Frameworks */,
+				C9EC500E186676D9001EDFE4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9EC4FE7186676D9001EDFE4 = {
+			isa = PBXGroup;
+			children = (
+				C9EC4FF9186676D9001EDFE4 /* BarCode */,
+				C9EC5012186676D9001EDFE4 /* BarCodeTests */,
+				C9EC4FF2186676D9001EDFE4 /* Frameworks */,
+				C9EC4FF1186676D9001EDFE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9EC4FF1186676D9001EDFE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC4FF0186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject.app */,
+				C9EC500B186676D9001EDFE4 /* HHBarCodeViewControllerSampleProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9EC4FF2186676D9001EDFE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC4FF3186676D9001EDFE4 /* Foundation.framework */,
+				C9EC4FF5186676D9001EDFE4 /* CoreGraphics.framework */,
+				C9EC4FF7186676D9001EDFE4 /* UIKit.framework */,
+				C9EC500C186676D9001EDFE4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9EC4FF9186676D9001EDFE4 /* BarCode */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC5002186676D9001EDFE4 /* AppDelegate.h */,
+				C9EC5003186676D9001EDFE4 /* AppDelegate.m */,
+				C9EC5022186676F8001EDFE4 /* CameraPresenterViewController.h */,
+				C9EC5023186676F8001EDFE4 /* CameraPresenterViewController.m */,
+				C9EC5005186676D9001EDFE4 /* Images.xcassets */,
+				C9EC4FFA186676D9001EDFE4 /* Supporting Files */,
+			);
+			path = BarCode;
+			sourceTree = "<group>";
+		};
+		C9EC4FFA186676D9001EDFE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC502718667753001EDFE4 /* UIView+Positioning.h */,
+				C9EC50251866774E001EDFE4 /* UIView+Positioning.m */,
+				C9EC4FFB186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject-Info.plist */,
+				C9EC4FFC186676D9001EDFE4 /* InfoPlist.strings */,
+				C9EC4FFF186676D9001EDFE4 /* main.m */,
+				C9EC5001186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9EC5012186676D9001EDFE4 /* BarCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC5018186676D9001EDFE4 /* BarCodeTests.m */,
+				C9EC5013186676D9001EDFE4 /* Supporting Files */,
+			);
+			path = BarCodeTests;
+			sourceTree = "<group>";
+		};
+		C9EC5013186676D9001EDFE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9EC5014186676D9001EDFE4 /* HHBarCodeViewControllerSampleProjectTests-Info.plist */,
+				C9EC5015186676D9001EDFE4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9EC4FEF186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EC501C186676D9001EDFE4 /* Build configuration list for PBXNativeTarget "HHBarCodeViewControllerSampleProject" */;
+			buildPhases = (
+				C9EC4FEC186676D9001EDFE4 /* Sources */,
+				C9EC4FED186676D9001EDFE4 /* Frameworks */,
+				C9EC4FEE186676D9001EDFE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHBarCodeViewControllerSampleProject;
+			productName = BarCode;
+			productReference = C9EC4FF0186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9EC500A186676D9001EDFE4 /* HHBarCodeViewControllerSampleProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EC501F186676D9001EDFE4 /* Build configuration list for PBXNativeTarget "HHBarCodeViewControllerSampleProjectTests" */;
+			buildPhases = (
+				C9EC5007186676D9001EDFE4 /* Sources */,
+				C9EC5008186676D9001EDFE4 /* Frameworks */,
+				C9EC5009186676D9001EDFE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9EC5011186676D9001EDFE4 /* PBXTargetDependency */,
+			);
+			name = HHBarCodeViewControllerSampleProjectTests;
+			productName = BarCodeTests;
+			productReference = C9EC500B186676D9001EDFE4 /* HHBarCodeViewControllerSampleProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9EC4FE8186676D9001EDFE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = haskins;
+				TargetAttributes = {
+					C9EC500A186676D9001EDFE4 = {
+						TestTargetID = C9EC4FEF186676D9001EDFE4;
+					};
+				};
+			};
+			buildConfigurationList = C9EC4FEB186676D9001EDFE4 /* Build configuration list for PBXProject "HHBarCodeViewControllerSampleProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C9EC4FE7186676D9001EDFE4;
+			productRefGroup = C9EC4FF1186676D9001EDFE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9EC4FEF186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject */,
+				C9EC500A186676D9001EDFE4 /* HHBarCodeViewControllerSampleProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9EC4FEE186676D9001EDFE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC4FFE186676D9001EDFE4 /* InfoPlist.strings in Resources */,
+				C9EC5006186676D9001EDFE4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC5009186676D9001EDFE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC5017186676D9001EDFE4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9EC4FEC186676D9001EDFE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC5024186676F8001EDFE4 /* CameraPresenterViewController.m in Sources */,
+				C9EC5004186676D9001EDFE4 /* AppDelegate.m in Sources */,
+				C9EC50261866774E001EDFE4 /* UIView+Positioning.m in Sources */,
+				C9EC5000186676D9001EDFE4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EC5007186676D9001EDFE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EC5019186676D9001EDFE4 /* BarCodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9EC5011186676D9001EDFE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9EC4FEF186676D9001EDFE4 /* HHBarCodeViewControllerSampleProject */;
+			targetProxy = C9EC5010186676D9001EDFE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9EC4FFC186676D9001EDFE4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9EC4FFD186676D9001EDFE4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9EC5015186676D9001EDFE4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9EC5016186676D9001EDFE4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9EC501A186676D9001EDFE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9EC501B186676D9001EDFE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9EC501D186676D9001EDFE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BarCode/HHBarCodeViewControllerSampleProject-Prefix.pch";
+				INFOPLIST_FILE = "BarCode/HHBarCodeViewControllerSampleProject-Info.plist";
+				PRODUCT_NAME = HHBarCodeViewControllerSampleProject;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9EC501E186676D9001EDFE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BarCode/HHBarCodeViewControllerSampleProject-Prefix.pch";
+				INFOPLIST_FILE = "BarCode/HHBarCodeViewControllerSampleProject-Info.plist";
+				PRODUCT_NAME = HHBarCodeViewControllerSampleProject;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9EC5020186676D9001EDFE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BarCode.app/BarCode";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BarCode/BarCode-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BarCodeTests/HHBarCodeViewControllerSampleProjectTests-Info.plist";
+				PRODUCT_NAME = HHBarCodeViewControllerSampleProjectTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9EC5021186676D9001EDFE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BarCode.app/BarCode";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BarCode/BarCode-Prefix.pch";
+				INFOPLIST_FILE = "BarCodeTests/HHBarCodeViewControllerSampleProjectTests-Info.plist";
+				PRODUCT_NAME = HHBarCodeViewControllerSampleProjectTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9EC4FEB186676D9001EDFE4 /* Build configuration list for PBXProject "HHBarCodeViewControllerSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EC501A186676D9001EDFE4 /* Debug */,
+				C9EC501B186676D9001EDFE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EC501C186676D9001EDFE4 /* Build configuration list for PBXNativeTarget "HHBarCodeViewControllerSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EC501D186676D9001EDFE4 /* Debug */,
+				C9EC501E186676D9001EDFE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EC501F186676D9001EDFE4 /* Build configuration list for PBXNativeTarget "HHBarCodeViewControllerSampleProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EC5020186676D9001EDFE4 /* Debug */,
+				C9EC5021186676D9001EDFE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9EC4FE8186676D9001EDFE4 /* Project object */;
+}
