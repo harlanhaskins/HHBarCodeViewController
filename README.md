@@ -19,11 +19,13 @@ I'd highly recommend if you use the returned bar code that you do it in a comple
 
 Like this:
 
-    - (void) barCodeViewController:(UIViewController *)barCodeViewController didDetectBarCode:(NSString *)barCode {
-        [self dismissViewControllerAnimated:YES completion:^{
-            dataTextView.text = barCode;
-        }];
-    }
+```Objective-C
+- (void) barCodeViewController:(UIViewController *)barCodeViewController didDetectBarCode:(NSString *)barCode {
+    [self dismissViewControllerAnimated:YES completion:^{
+        dataTextView.text = barCode;
+    }];
+}
+```
 
 # Author
 
